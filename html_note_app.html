@@ -5,7 +5,10 @@
     <title>Note App</title>
     <link rel="stylesheet" href="Css_note_app.css">
 </head>
+
 <body>
+
+
     <header>
 
 
@@ -26,7 +29,61 @@
         </div>
 
     </header>
+
+    <main>
+        <div id="main_container_menu">
+            <button id="home_btn" onclick="Home()" class="Menu_options choosen"> Home </button>
+            <button id="note_btn" onclick="Note()" class="Menu_options"> Note </button>
+            <button id="timer_btn" onclick="Timer()" class="Menu_options"> Timer </button>
+            <button id="calendar_btn" onclick="Calendar()" class="Menu_options"> Calendar </button>
+
+        </div>
+
+        <div id="main_container">
+
+
+            <div id="Home_txt">
+                Welcome
+            </div>
+            
+            <div id="Note_page">
+                <div id="note_page_note_display">
+                    <span id="Notes_txt"> Notes: </span>
+                    <div id="Note_display"></div>
+                    <button id="New_note" onclick="New_note()"> New Note </button>
+                </div>
+
+                <div id="note_page_add_note">
+                    <input type="text" id="Title_note" placeholder="Title" maxlength="40">
+                    <textarea id="Txt_note" placeholder="Eg: groceries, task(s), etc ..." maxlength="500"></textarea>
+                    
+                    <div id="horizontal_lines">
+                        <button id="Back" onclick="Back()"> Back </button>
+                        <button id="Add_note" onclick="Add_note()"> Add Note </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="Timer_page">
+
+            </div>
+
+            <div id="Calendar_page">
+
+            </div>
+
+
+
+        </div>
+    </main>
     
+    <footer>
+        <span id="lbl_footer"> Copyright </span>
+    </footer>
+
+
+
 
     <script src="Javascript_note_app.jsx" defer ></script>
 </body>

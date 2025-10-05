@@ -1,9 +1,247 @@
-body{
-    display: flexbox;
+
+
+html,body{
+    height: 100%;
+    background-color: #ffffff ;
+    font-size: 15px; 
+    background-color: var(--bg_color);
+    display: flex;
     flex-direction: column;
-    background-color: rgb(255, 255, 255) ;
+    font-family: var(--font_type);
+
 }
+
+/** GLOBAL VALUES**/ 
+
+:root {
+
+    /** SIZE **/ 
+    --title_ft_size: clamp(15px, 6vw, 36px);
+    --txt_ft_size : clamp(15px, 2vw, 30px); 
+    --title_note_resume_txt_ft_size : clamp(15px, 2vw, 25px);
+    --txt_note_resume_txt_ft_size : clamp(10px, 1vw, 20px);
+
+    --btn_txt_ft_size: clamp(10px, 1vw, 30px); 
+
+    /** COLOR **/ 
+    --bg_color:  rgb(61, 61, 96);
+    --btn_bg_color: rgb(76, 76, 104); 
+    --choosen_btn_color: rgb(31, 31, 51); 
+
+    /*FONT*/
+    --font_type :"Lucida Console", "Courier New", monospace;  
+}   
+
+/** HEADER **/ 
 header{
-    background-color: rgb(61, 61, 96);
+    width: 100%; 
+    min-width: 300px; 
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    flex-direction: row; 
+    margin: 0 auto 5% auto;
+
+    font-size: var(--txt_ft_size);
+    background-color: var(--bg_color);
     color: white;
+}
+    #first_column_header{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    }
+
+    #Title{
+        margin: 10px;
+        font-size: var(--title_ft_size);
+    }
+
+    #last_column_header{
+        margin: 10px;
+    }
+
+    #Setting_link a{
+        text-decoration: none;
+        color: white;
+    }
+
+
+
+/* MAIN */
+main{
+    flex: 1;
+    width: 70%;
+    max-width: 700px;
+    margin: 5% auto auto auto;
+} 
+
+
+    #main_container_menu {
+        display: flex;
+        flex-direction: row;
+        gap: 2%; 
+    }
+
+    .Menu_options{
+        color: white;
+        font-size: var(--txt_ft_size);
+        background-color: var(--btn_bg_color);
+        border: 2px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        padding: 2%
+    }
+
+    .Menu_options.choosen {
+        background-color: var(--choosen_btn_color);
+
+    }
+
+    #main_container {
+        width: 100%;
+        height: 80%;
+        background-color: var(--choosen_btn_color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+
+    }
+    
+
+    #Home_txt{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: var(--title_ft_size);
+        color: white;
+        width: 100%;
+        text-align: center;
+
+    }
+
+    /* NOTE PAGE */
+
+        #Note_page{
+            width: 100%;
+            height: 90%;
+            display: none;
+            flex-direction: column;
+            font-size: var(--txt_ft_size);
+        }
+
+        #note_page_note_display{
+            width: 100%;
+            height: 100%;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: var(--txt_ft_size);
+        }
+
+        #Notes_txt{
+            font-size: var(--txt_ft_size);
+            color: white;
+            margin: 10px;
+            align-self: flex-start;
+        }
+            
+        #Note_display{
+            width: 90%;
+            height: 80%;
+            display:flex;
+            flex-wrap: wrap;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            background-color: white;
+        }
+
+        .note_resume{
+            width: 25%;
+            height: 40%;
+            min-width: 80px; 
+            margin: 10px;
+            border-radius: 5px;
+            background-color: var(--bg_color);
+
+        }
+
+        .note_resume p{
+            font-size: var(--txt_ft_size);
+            margin: 5px;
+        }
+
+
+        
+        #note_page_add_note{
+            width: 100%;
+            height: 100%;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: var(--txt_ft_size);
+        }
+
+        #Title_note{
+            width: 90%;
+            margin: auto;
+            font-size: var(--txt_ft_size);
+        }
+
+        #Txt_note{
+            width: 90%;
+            height: 60%;
+            margin: auto;
+            font-size: var(--txt_ft_size);
+        }
+
+        #New_note, #Add_note, #Back{
+            width: 50%;
+            max-width: 100px;
+            max-width: 150px;
+            margin: auto; 
+            margin-top: 10px;
+            font-size: var(--txt_ft_size);
+            background-color: var(--btn_bg_color);
+            color: white;
+            border-radius: 10px;
+            border:solid 2px black; 
+        }
+
+        #horizontal_lines {
+            width: 80%;
+            display: flex;
+            flex-direction: row;
+
+        }
+        
+    
+    /* TIMER PAGE */
+    #Timer_page{
+        display: none;
+    }
+
+
+
+    /* Calendar PAGE */
+    #Calendar_page{
+        display: none;
+    }
+
+
+
+
+/* FOOTER */
+footer{
+    display: flex;
+    justify-content: center;
+    font-size: var(--txt_ft_size);
+    color: white;
+    background-color: var(--bg_color);
 }
